@@ -1,7 +1,7 @@
 {
     "name": "People",
-    "alias": "people",
-    "description": "",
+    "alias": "church-people",
+    "description": "People module",
     "keywords": [],
     "priority": 0,
     "providers": [
