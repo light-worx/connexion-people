@@ -15,58 +15,15 @@ class IndividualsTable
     {
         return $table
             ->columns([
-                TextColumn::make('title')
-                    ->searchable(),
                 TextColumn::make('surname')
                     ->searchable(),
                 TextColumn::make('firstname')
+                    ->label('First name')
                     ->searchable(),
-                TextColumn::make('email')
-                    ->label('Email address')
-                    ->searchable(),
-                TextColumn::make('birthdate')
-                    ->searchable(),
-                TextColumn::make('sex')
-                    ->searchable(),
-                ImageColumn::make('image'),
-                TextColumn::make('memberstatus')
-                    ->searchable(),
-                TextColumn::make('household.id')
-                    ->searchable(),
-                TextColumn::make('groupleader')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('giving')
-                    ->searchable(),
-                TextColumn::make('officephone')
+                TextColumn::make('household.addressee')
                     ->searchable(),
                 TextColumn::make('cellphone')
-                    ->searchable(),
-                TextColumn::make('welcome_email')
-                    ->searchable(),
-                TextColumn::make('user_id')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('uid')
-                    ->searchable(),
-                TextColumn::make('online')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('nametag_exclude')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                TextColumn::make('deleted_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                    ->searchable()
             ])
             ->filters([
                 //

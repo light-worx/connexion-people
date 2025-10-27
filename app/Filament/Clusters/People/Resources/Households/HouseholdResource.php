@@ -25,6 +25,11 @@ class HouseholdResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'addressee';
 
+    public static function shouldRegisterNavigation(): bool
+    {
+        return false; 
+    }
+
     public static function form(Schema $schema): Schema
     {
         return HouseholdForm::configure($schema);
