@@ -1,10 +1,10 @@
 {
-    "name": "nwidart/core",
-    "description": "",
+    "name": "light-worx/connexion-people",
+    "description": "People module for Connexion church management software",
     "authors": [
         {
-            "name": "Nicolas Widart",
-            "email": "n.widart@gmail.com"
+            "name": "Michael Bishop",
+            "email": "admin@lightworx.co.za"
         }
     ],
     "extra": {
