@@ -68,8 +68,7 @@ class GroupmembersRelationManager extends RelationManager
             ])
             ->recordActions([
                 EditAction::make(),
-                DissociateAction::make(),
-                DeleteAction::make(),
+                DissociateAction::make()
             ])
             ->toolbarActions([
                 BulkActionGroup::make([

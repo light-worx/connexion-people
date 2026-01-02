@@ -16,8 +16,7 @@ class GroupsTable
             ->columns([
                 TextColumn::make('groupname')->label('Group')
                     ->searchable(),
-                TextColumn::make('individual.fullname')->label('Leader')
-                    ->searchable(),
+                TextColumn::make('individual.fullname')->label('Leader'),
                 IconColumn::make('grouptype')->label('Type')
                     ->icon(fn (string $state): string => match ($state) {
                         'admin' => 'heroicon-o-chart-bar',
