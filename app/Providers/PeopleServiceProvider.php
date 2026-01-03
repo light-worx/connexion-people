@@ -2,6 +2,7 @@
 
 namespace Modules\People\Providers;
 
+use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Nwidart\Modules\Traits\PathNamespace;
@@ -27,6 +28,12 @@ class PeopleServiceProvider extends ServiceProvider
         $this->registerConfig();
         $this->registerViews();
         $this->loadMigrationsFrom(module_path($this->name, 'database/migrations'));
+        Relation::morphMap([
+            'group' => 'Modules\People\Models\Group',
+            'household' => 'Modules\People\Models\Household',
+            'individual' => 'Modules\People\Models\Individual',
+            'pastoralcase' => 'Modules\People\Models\Pastoralcase'
+        ]);
     }
 
     /**
